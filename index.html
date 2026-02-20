@@ -5,26 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Barbie Anime Store · pastel dream</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- The image source will be set via JS for mobile/desktop differentiation -->
-    <div id="intro">
-  <h1>Welcome to the Store</h1>
-  <button id="enter-btn">Tap Here ✨</button>
+  <!-- INTRO SECTION -->
+  <div id="intro">
+    <h1>Welcome to the Store</h1>
+    <button id="enter-btn">Tap Here ✨</button>
   </div>
 
-  <!-- BACKGROUND VIDEO (src set by script) -->
+  <!-- BACKGROUND VIDEO -->
   <video id="bg-video" autoplay muted loop playsinline></video>
 
   <!-- PARTICLES CANVAS -->
   <canvas id="particles"></canvas>
 
-  <!-- CUSTOM CURSOR (only visible on hover devices) -->
+  <!-- CUSTOM CURSOR -->
   <div class="cursor"></div>
 
-  <!-- floating shapes container -->
+  <!-- FLOATING SHAPES -->
   <div id="floating"></div>
 
   <!-- MAIN SECTION -->
@@ -33,75 +33,46 @@
     <div class="products">
       <!-- card 1 -->
       <div class="card">
-        <img src="link1.png" alt="facewash" loading="lazy">
-        <h3>DOT & KEY(skincare)</h3>
-        <p>DOT & KEY Vitamin C + E Super Bright Gel Face Wash For Glowing And Brightening Skin | All Skin Types|With Triple Vitamin C| Face Wash For Women & Men|100 Ml
-Visit the DOT & KEY Store.</p>
+        <img src="https://via.placeholder.com/300x300/ffb6c1/ff69b4?text=Facewash+1" alt="facewash" loading="lazy">
+        <h3>DOT & KEY (skincare)</h3>
+        <p>DOT & KEY Vitamin C + E Super Bright Gel Face Wash For Glowing And Brightening Skin | All Skin Types|With Triple Vitamin C| Face Wash For Women & Men|100 Ml</p>
         <a href="https://amzn.to/46j5cXN" class="btn" target="_blank" rel="noopener">Buy on Amazon</a>
       </div>
       <!-- card 2 -->
       <div class="card">
-        <img src="link2.png" alt="facewash" loading="lazy">
+        <img src="https://via.placeholder.com/300x300/ffb6c1/ff69b4?text=Rice+Wash" alt="facewash" loading="lazy">
         <h3>Rice Dewy Bright Face</h3>
-        <p>Mamaearth Rice Dewy Bright Face Wash With Rice Water & Niacinamide for Glass Skin | For Hydrated & Even skin Tone | Glowing & Brightening | Korean skin Care Product | For All skin Types | For Men & Women | 100 ml
-Visit the Mamaearth Store</p>
+        <p>Mamaearth Rice Dewy Bright Face Wash With Rice Water & Niacinamide for Glass Skin | For Hydrated & Even skin Tone | Glowing & Brightening | Korean skin Care Product | For All skin Types | 100 ml</p>
         <a href="https://amzn.to/4cKhFHQ" class="btn" target="_blank" rel="noopener">Buy on Amazon</a>
       </div>
       <!-- card 3 -->
       <div class="card">
-        <img src="link3.png" alt="papaya facewash" loading="lazy">
+        <img src="https://via.placeholder.com/300x300/ffb6c1/ff69b4?text=Super+Glow" alt="papaya facewash" loading="lazy">
         <h3>Super Glow Facewash</h3>
-        <p>Foxtale Vitamin C Super Glow Face Wash with Papaya enzyme | Reduces Tan | Boosts Glow | Gently Exfoliates & Brightens Skin | Reduces Pigmentation | Face Wash for Men & Women- 100ml</p>
+        <p>Foxtale Vitamin C Super Glow Face Wash with Papaya enzyme | Reduces Tan | Boosts Glow | Gently Exfoliates & Brightens Skin | Reduces Pigmentation | 100ml</p>
         <a href="https://amzn.to/46j5vSr" class="btn" target="_blank" rel="noopener">Buy on Amazon</a>
       </div>
       <!-- card 4 -->
       <div class="card">
-        <img src="link4.png" alt="skin tone" loading="lazy">
+        <img src="https://via.placeholder.com/300x300/ffb6c1/ff69b4?text=DERMATOUCH" alt="skin tone" loading="lazy">
         <h3>DERMATOUCH</h3>
         <p>DERMATOUCH Bright & Even Tone Face Wash with Niacinamide, Vitamin E and Kojic Acid | Daily Gentle Face Cleanser For Tan, Pigmentation, Uneven Tone - 30G</p>
         <a href="https://amzn.to/4aJ0FPE" class="btn" target="_blank" rel="noopener">Buy on Amazon</a>
       </div>
       <!-- card 5 -->
       <div class="card">
-        <img src="link5.png" alt="Cute Plush" loading="lazy">
-        <h3>foxtale Gentle Hydrating Face Wash</h3>
-        <p>Foxtale Gentle Hydrating Face Wash with Hyaluronic Acid, Vitamin B5 | Deep Pore Cleansing | Dirt Control | Make-up Remover | Cleanser For Men & Women | All Skin Types | 100 ml</p>
+        <img src="https://via.placeholder.com/300x300/ffb6c1/ff69b4?text=Foxtale" alt="Cute Plush" loading="lazy">
+        <h3>Foxtale Gentle Hydrating</h3>
+        <p>Foxtale Gentle Hydrating Face Wash with Hyaluronic Acid, Vitamin B5 | Deep Pore Cleansing | Dirt Control | Make-up Remover | All Skin Types | 100 ml</p>
         <a href="https://amzn.to/4aCSuo1" class="btn" target="_blank" rel="noopener">Buy on Amazon</a>
       </div>
     </div>
   </section>
 
   <script src="script.js"></script>
-
-  <!-- small tweaks -->
-  <style>
-    /* ensure intro is above but button clickable */
-    #enter-btn, #enter-btn * { pointer-events: auto; }
-    /* product cards btn real click */
-    .btn { pointer-events: auto; }
-    /* when body cursor is none on desktop, default hidden */
-    body {
-      cursor: auto; /* will be overridden by script */
-    }
-    /* for devices with hover, we want custom cursor visible */
-    @media (hover: hover) {
-      body {
-        cursor: none !important; /* ensures default cursor hidden, custom shows */
-      }
-    }
-    /* but we must ensure that if custom cursor fails, user can still see something */
-    .cursor {
-      display: block;
-    }
-    /* if touch, hide custom */
-    @media (hover: none) {
-      .cursor { display: none; }
-      body { cursor: auto !important; }
-    }
-  </style>
 </body>
-
 </html>
+
 
 
 
