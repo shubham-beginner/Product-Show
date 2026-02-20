@@ -17,19 +17,27 @@
     }
 
     /* ---------- FULLSCREEN INTRO (fixed) ---------- */
-    #intro {
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: #ffd1dc;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      transition: opacity 0.4s ease;
-      pointer-events: none;        /* allows click‑through after fade, but button needs special handling */
-    }
+   /* Default background (desktop ke liye) */
+#intro {
+  background-image: url("download(9).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Mobile ke liye background change */
+@media (max-width: 768px) {
+  #intro {
+    background-image: url("barbie-tablet.jpg");
+  }
+}
     #intro h1 {
       font-size: clamp(32px, 8vw, 50px);
       color: #ff69b4;
@@ -275,4 +283,5 @@
       section { padding: 100px 12px 60px; }
       .products { gap: 25px; }
     }
+
   
