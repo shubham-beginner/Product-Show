@@ -24,16 +24,16 @@ const introImg = document.getElementById('intro-img');
 
 function setCustomVideo() {
   const width = window.innerWidth;
-  
-  // YAHAN APNI VIDEO PATHS DALO
+
   if (width < 768) {
-    // Mobile video
-    bgVideo.src = 'Untitled design.mp4';  // APNI MOBILE VIDEO KA PATH
+    bgVideo.src = "Untitled design.mp4";
   } else {
-    // Desktop video (768px and above)
-    bgVideo.src = 'barbie.mp4'; // APNI DESKTOP VIDEO KA PATH
+    bgVideo.src = "barbie.mp4";
   }
-  
+
+  bgVideo.load();          // important for Safari
+  bgVideo.play().catch(() => {});  // prevents autoplay error
+}
   console.log('Video loaded for', width < 768 ? 'mobile' : 'desktop');
 }
 setCustomVideo();
@@ -197,4 +197,5 @@ window.addEventListener('resize', setCustomVideo);
 
 
     })();
+
 
