@@ -28,10 +28,10 @@ function setCustomVideo() {
   // YAHAN APNI VIDEO PATHS DALO
   if (width < 768) {
     // Mobile video
-    bgVideo.src = 'mobile-video.mp4';  // APNI MOBILE VIDEO KA PATH
+    bgVideo.src = 'Untitled design.mp4';  // APNI MOBILE VIDEO KA PATH
   } else {
     // Desktop video (768px and above)
-    bgVideo.src = 'desktop-video.mp4'; // APNI DESKTOP VIDEO KA PATH
+    bgVideo.src = 'barbie.mp4'; // APNI DESKTOP VIDEO KA PATH
   }
   
   console.log('Video loaded for', width < 768 ? 'mobile' : 'desktop');
@@ -197,3 +197,4 @@ window.addEventListener('resize', setCustomVideo);
 
 
     })();
+
